@@ -1,17 +1,10 @@
 // eslint.config.js
-export default [
+module.exports = [
   {
-    ignores: ["node_modules"], // Ignore node_modules folder
-  },
-  {
-    files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"], // Files to lint
-    languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
-    },
+    files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
     rules: {
-      "no-unused-vars": "warn",
-      "no-console": "off",
+      "no-console": "warn",
+      "eqeqeq": "error",
     },
   },
 ];
