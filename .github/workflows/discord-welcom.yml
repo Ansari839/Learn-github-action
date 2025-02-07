@@ -1,0 +1,19 @@
+name: Welcome New Contributors (Discord Notification)
+
+on:
+  pull_request:
+    types: [opened]  # Trigger when a new pull request is opened
+
+jobs:
+  discord-welcome:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Send Welcome Message to Discord
+        run: |
+          curl -X POST -H "Content-Type: application/json" \
+          -d '{"content": "🎉 Welcome to the project, **${{ github.actor }}**! Thanks for contributing! 🚀"}' \
+          ${{ secrets.DISCORD_WEBHOOK_URL }}
