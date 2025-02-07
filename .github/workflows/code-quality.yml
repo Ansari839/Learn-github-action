@@ -1,7 +1,6 @@
 name: Code Quality Check
 
 on:
-  pull_request:
   push:
     branches:
       - main
@@ -18,10 +17,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # Node 18 to avoid engine errors
+          node-version: '18'
 
       - name: Install Dependencies
         run: npm install
 
       - name: Run ESLint
-        run: npx eslint .  # Removed --ext flag
+        run: npx eslint .
