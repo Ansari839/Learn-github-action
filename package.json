@@ -1,0 +1,11 @@
+{
+  "name": "learn-github-action",
+  "version": "1.0.0",
+  "description": "ghp_yiie4m04WpAoyPbjAvEEZ0MhlVt0Ls14l0R",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
