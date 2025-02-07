@@ -5,6 +5,10 @@ on:
     branches:
       - main
       - code-quality-task
+  pull_request:
+    branches:
+      - main
+      - code-quality-task
 
 jobs:
   lint:
@@ -20,7 +24,9 @@ jobs:
           node-version: '18'
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install eslint --save-dev
 
       - name: Run ESLint
-        run: npx eslint .
+        run: npx eslint . --ext .js,.jsx,.ts,.tsx
