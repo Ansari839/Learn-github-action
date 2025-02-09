@@ -1,18 +1,9 @@
-export default [
-  {
-    ignores: ["node_modules", "dist"],
-  },
+module.exports = [
   {
     files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
-    languageOptions: {
-      parserOptions: {
-        ecmaVersion: 2020,
-        sourceType: "module",
-      },
-    },
     rules: {
-      "no-unused-vars": "warn",
-      "no-console": "off",  // This allows console statements
+      "no-console": "warn",
+      "semi": ["error", "always"],
     },
   },
 ];
